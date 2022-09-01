@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
+/*rgb(11, 34, 61)*/
+/*rgb(0, 174, 239)*/
+/**********
+basic styles
+***********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #0b223d;
+  line-height: 1.5; }
+
+.container {
+  width: 80%;
+  margin: auto; }
+  @media (max-width: 768px) {
+    .container {
+      width: 90%; } }
+
+a {
+  color: #0b223d !important;
+  text-decoration: none !important;
+  font-weight: 600 !important; }
+  a:hover {
+    color: #00aeef !important;
+    transition: 0.3s ease !important; }
+
+ul {
+  list-style: none; }
+
+h2 {
+  font-size: 3rem;
+  text-align: center; }
+  h2::after {
+    display: block;
+    content: "";
+    width: 20%;
+    height: 15px;
+    background: linear-gradient(40deg, #00aeef, #fff);
+    margin: 10px auto 30px auto; }
+    @media (max-width: 768px) {
+      h2::after {
+        font-size: 2rem; } }
+
+/**********
+nav
+***********/
+nav {
+  background-color: #fff;
+  padding: 5px 0; }
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 5px; }
+    @media (max-width: 768px) {
+      nav .container {
+        flex-direction: column; } }
+    nav .container img {
+      width: 100px;
+      height: auto; }
+    nav .container ul {
+      display: flex; }
+      nav .container ul li {
+        text-transform: uppercase;
+        margin-left: 40px; }
+        @media (max-width: 768px) {
+          nav .container ul li {
+            margin-left: 10px; } }
+
+/**********
+header
+***********/
+header {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.99), rgba(11, 34, 61, 0.1)), url(img/header2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 85vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; }
+  @media (max-width: 768px) {
+    header {
+      height: 60vh; } }
+  header h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: right;
+    background-color: rgba(0, 174, 239, 0.6);
+    padding: 30px 30px 30px 60px;
+    border-radius: 200px 0 0 0;
+    text-shadow: 0 0 3px #0b223d;
+    margin-bottom: 0px; }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+        border-radius: 100px 0 0 0; } }
+
+/**********
+about-us
+***********/
+.about {
+  padding: 50px 0; }
+  .about h3 {
+    font-size: 1.7rem;
+    margin: 10px 0; }
+  .about li::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f058";
+    color: #00aeef;
+    margin-right: 10px; }
+  .about button {
+    padding: 15px 30px;
+    background: linear-gradient(to left, #0b223d, #00aeef);
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    margin: 30px auto 0 auto;
+    border-radius: 20px 0 20px 0; }
+    .about button:hover {
+      background: linear-gradient(to right, #0b223d, #00aeef);
+      border-radius: 0 20px 0 20px;
+      cursor: pointer;
+      transition: 0.3s ease; }
+
+/**********
+services
+***********/
+.services {
+  text-align: center;
+  padding: 50px 0;
+  background-image: linear-gradient(rgba(0, 174, 239, 0.8), rgba(0, 174, 239, 0.8)), url(img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 400px 0 0 0; }
+  @media (max-width: 768px) {
+    .services {
+      border-radius: 150px 0 0 0; } }
+  .services .container {
+    display: flex;
+    flex-wrap: wrap; }
+    .services .container article {
+      flex: 0 0 50%;
+      padding: 20px; }
+      @media (max-width: 768px) {
+        .services .container article {
+          flex: 0 0 100%; } }
+      .services .container article i {
+        font-size: 2rem; }
+      .services .container article p {
+        color: #fff;
+        font-size: 1.2rem; }
+
+/**********
+mentorship
+***********/
+.mentorship {
+  padding: 50px 0; }
+  .mentorship button {
+    padding: 15px 30px;
+    background: linear-gradient(to left, #0b223d, #00aeef);
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    margin: 30px auto 0 auto;
+    border-radius: 20px 0 20px 0; }
+    .mentorship button:hover {
+      background: linear-gradient(to right, #0b223d, #00aeef);
+      border-radius: 0 20px 0 20px;
+      cursor: pointer;
+      transition: 0.3s ease; }
+
+/**********
+recomm
+***********/
+.recomm {
+  padding: 50px 0;
+  background: linear-gradient(rgba(0, 174, 239, 0.8), rgba(0, 174, 239, 0.8)), url(img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 400px 0 0; }
+  @media (max-width: 768px) {
+    .recomm {
+      border-radius: 0 150px 0 0; } }
+  .recomm .container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around; }
+    .recomm .container article {
+      flex: 0 0 40%; }
+      @media (max-width: 768px) {
+        .recomm .container article {
+          flex: 0 0 100%;
+          margin-bottom: 40px; } }
+      .recomm .container article img {
+        width: 60%;
+        height: auto;
+        border-radius: 50%; }
+        @media (max-width: 768px) {
+          .recomm .container article img {
+            margin-bottom: 10px; } }
+      .recomm .container article h4 {
+        color: #fff;
+        font-size: 1.4rem; }
+        .recomm .container article h4 span {
+          font-size: .8rem;
+          color: #0b223d; }
+
+/**********
+footer
+***********/
+footer {
+  padding: 20px 0;
+  text-align: center;
+  background: #0b223d;
+  color: #fff; }
+  footer .lastlink {
+    color: #fff !important; }
+    footer .lastlink:hover {
+      color: #00aeef !important; }
+
+/*# sourceMappingURL=style.css.map */

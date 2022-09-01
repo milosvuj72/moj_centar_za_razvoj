@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+$primaryColor: #0b223d; /*rgb(11, 34, 61)*/
+$secondayColor: #00aeef; /*rgb(0, 174, 239)*/
+$white: #fff;
+$font: 16px;
+$fontFamily: 'Montserrat', sans-serif;
+$transition: .3s ease;
+$padding: 50px 0;
+@mixin btn{
+    padding: 15px 30px;
+    background: linear-gradient(to left, $primaryColor, $secondayColor);
+    border: none;
+    font-size: 1rem;
+    color: $white;
+    display: block;
+    margin: 30px auto 0 auto;
+    border-radius: 20px 0 20px 0;
+    &:hover{
+        background: linear-gradient(to right, $primaryColor, $secondayColor);
+        border-radius: 0 20px 0 20px;
+        cursor: pointer;
+        transition: $transition;
+    }
+}
+/**********
+basic styles
+***********/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: $font;
+    font-family: $fontFamily;
+    color: $primaryColor;
+    line-height: 1.5;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    @media(max-width:768px){
+        width: 90%;
+    }
+}
+a{
+    color: $primaryColor !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    &:hover{
+        color: $secondayColor !important;
+        transition: $transition !important;
+    }
+}
+ul{
+    list-style: none;
+}
+h2{
+    font-size: 3rem;
+    text-align: center;
+    &::after{
+        display: block;
+        content: "";
+        width: 20%;
+        height: 15px;
+        background: linear-gradient(40deg, $secondayColor, $white);
+        margin: 10px auto 30px auto;
+        @media(max-width:768px){
+            font-size: 2rem;
+        }
+    }
+}
+/**********
+nav
+***********/
+nav{
+    background-color: $white;
+    padding: 5px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 5px;
+        @media(max-width:768px){
+            flex-direction: column;
+        }
+        img{
+            width: 100px;
+            height: auto;
+        }
+        ul{
+            display: flex;
+            li{
+                text-transform: uppercase;
+                margin-left: 40px;
+                @media(max-width:768px){
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+/**********
+header
+***********/
+header{
+    background-image:linear-gradient(rgba(255,255,255,.99),rgba(11, 34, 61,.1)), url(img/header2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    @media(max-width:768px){
+        height: 60vh;
+    }
+    h1{
+        font-size: 2.5rem;
+        color: $white;
+        text-align: right;
+        background-color:rgba(0, 174, 239,.6);
+        padding: 30px 30px 30px 60px;
+        border-radius: 200px 0 0 0;
+        text-shadow: 0 0 3px $primaryColor;
+        margin-bottom: 0px;
+        @media(max-width:768px){
+            font-size: 2rem;
+            border-radius: 100px 0 0 0;
+        }
+    }
+}
+/**********
+about-us
+***********/
+.about{
+    padding: $padding;
+    h3{
+        font-size: 1.7rem;
+        margin: 10px 0;
+    }
+        li::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f058";
+            color: $secondayColor;
+            margin-right: 10px;     
+    }
+    button{
+        @include btn;
+    }
+}
+/**********
+services
+***********/
+.services{
+    text-align: center;
+    padding: $padding;
+    background-image: linear-gradient(rgba(0, 174, 239,.8),rgba(0, 174, 239,.8)), url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 400px 0 0 0;
+    @media(max-width:768px){
+        border-radius: 150px 0 0 0;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        article{
+            flex: 0 0 50%;
+            padding: 20px;
+            @media(max-width:768px){
+                flex: 0 0 100%;
+            }
+        i{
+            font-size: 2rem;
+        }
+        p{
+            color: $white;
+            font-size: 1.2rem;
+        }
+        }
+    }
+}
+/**********
+mentorship
+***********/
+.mentorship{
+    padding: $padding;
+    button{
+        @include btn;
+    }
+}
+/**********
+recomm
+***********/
+.recomm{
+    padding: $padding;
+    background: linear-gradient(rgba(0, 174, 239,.8),rgba(0, 174, 239,.8)),url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 400px 0 0;
+    @media(max-width:768px){
+        border-radius: 0 150px 0 0;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-around;
+    article{
+        flex: 0 0 40%;
+        @media(max-width:768px){
+            flex: 0 0 100%;
+            margin-bottom: 40px;
+        }
+        img{
+            width: 60%;
+            height: auto;
+            border-radius: 50%;
+            @media(max-width:768px){
+                margin-bottom: 10px;
+            }
+        }
+        h4{
+            color: $white;
+            font-size: 1.4rem;
+        span{
+            font-size: .8rem;
+            color: $primaryColor;
+        }
+        }
+    }
+    }
+}
+/**********
+footer
+***********/
+footer{
+    padding: 20px 0;
+    text-align: center;
+    background: $primaryColor;
+    color: $white;
+    .lastlink{
+        color: $white !important;
+        &:hover{
+            color: $secondayColor !important;
+        }
+    }
+}
