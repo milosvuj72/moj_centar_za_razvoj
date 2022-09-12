@@ -53,6 +53,22 @@ nav
 nav {
   background-color: #fff;
   padding: 5px 0; }
+  nav .mobileBtn {
+    background-color: #00aeef;
+    padding: 15px 30px;
+    border: none;
+    color: #fff;
+    display: block;
+    margin: 30px auto 0 auto;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    padding: 10px;
+    display: none; }
+    @media (max-width: 768px) {
+      nav .mobileBtn {
+        display: block; } }
   nav .container {
     display: flex;
     justify-content: space-between;
@@ -65,14 +81,34 @@ nav {
     nav .container img {
       width: 100px;
       height: auto; }
+      @media (max-width: 768px) {
+        nav .container img {
+          position: absolute;
+          left: 10px;
+          width: 75px; } }
     nav .container ul {
       display: flex; }
+      @media (max-width: 768px) {
+        nav .container ul {
+          display: none;
+          position: absolute;
+          left: 40;
+          top: 90px;
+          background-color: rgba(0, 174, 239, 0.6);
+          text-shadow: 0 0 1px #0b223d;
+          width: 100%;
+          padding-top: 20px;
+          padding-bottom: 20px; } }
       nav .container ul li {
         text-transform: uppercase;
         margin-left: 40px; }
         @media (max-width: 768px) {
           nav .container ul li {
-            margin-left: 10px; } }
+            margin-left: 10px;
+            margin-bottom: 15px; } }
+        @media (max-width: 768px) {
+          nav .container ul li a {
+            color: #fff !important; } }
 
 /**********
 header
@@ -100,7 +136,9 @@ header {
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
-        border-radius: 100px 0 0 0; } }
+        border-radius: 100px 0 0 0;
+        padding: 18px 18px 18px 30px;
+        font-size: 1.6rem; } }
 
 /**********
 about-us
